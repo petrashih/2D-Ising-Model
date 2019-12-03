@@ -48,19 +48,19 @@ def calcMag(config):
     mag = np.sum(config)
     return mag
 ## change these parameters for a smaller (faster) simulation 
-nt      = 80         #  number of temperature points
-N       = 10         #  size of the lattice, N x N
-eqSteps = 100000       #  number of MC sweeps for equilibration
-mcSteps = 300000       #  number of MC sweeps for calculation
+nt      = 40         #  number of temperature points
+N       = 36         #  size of the lattice, N x N
+eqSteps = 90000       #  number of MC sweeps for equilibration
+mcSteps = 270000       #  number of MC sweeps for calculation
 
-FileEnergy = "Data_Energy_L10_80pt.txt"
-FileMagnet = "Data_Magnet_L10_80pt.txt"
-FileC = "Data_SpHeat_L10_80pt.txt"
-FileX = "Data_Suscep_L10_80pt.txt"
-FileFigure = "Fig_total_L10_80pt.png"
+FileEnergy = "Data_Energy_L36_40pt_firsthalf.txt"
+FileMagnet = "Data_Magnet_L36_40pt_firsthalf.txt"
+FileC = "Data_SpHeat_L36_40pt_firsthalf.txt"
+FileX = "Data_Suscep_L36_40pt_firsthalf.txt"
+FileFigure = "Fig_total_L36_40pt_firsthalf.png"
 
 
-T       = np.linspace(1.8, 3.0, nt); 
+T       = np.linspace(1.8, 2.4, nt); 
 E,M,C,X = np.zeros(nt), np.zeros(nt), np.zeros(nt), np.zeros(nt)
 iNSite = 1.0/(N*N)
 # divide by number of samples, and by system size to get intensive values
